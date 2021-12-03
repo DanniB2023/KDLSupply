@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,500;1,500&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root{
+    --yellow: #bf9a00;
+    --dark-color: #856b00;
+    --black: #444;
+    --light-color: #666;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --border-hover:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+#videoBG{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    height: auto;
+    position: relative;
+
+ }
+
+ 
+
+/*--------*/
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+.roles2{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+	grid-gap: 2rem;
+	font-size: 2rem;
+	margin:  0rem 12rem;
+	background-image:url(./images/Ubodytransparent.png);
+	background-repeat: no-repeat;
+}
+
+.roles2 h2{
+	color: #bf9a00;
+	margin-bottom: 2rem;
+	align-content: center;
+	justify-content: center;
+	width: 100%;
+	margin-left: 15%;
+}
+
+
+
+
+
+@media (max-width: 1088px){
+    section{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    }
+}
+
+@media (max-width: 880px){
+    section {
+        padding: 4rem 0 3rem;
+    }
+
+    .tab-menu .cap .btn-box{
+        margin-top: -14rem;
+    }
+    
+    .tab-menu .cap .btn-box button{
+         font-size: 11px;
+         padding: 12px 12px;
+      }
+
+      .content{
+        flex-direction: column;
+        display: block;
+        width: 380px;
+        height: auto;
+        position: absolute;
+        margin-left: -15rem;
+        padding: 5rem;
+
+    }
+
+    .roles .write-ups .square{
+        display: block;
+        margin: auto;
+        width: 2rem;
+    }
+
+    .tab-menu .cap{
+        overflow: visible;
+        width: 43.8rem;
+        display: block;
+        
+    }
+   
+
+    .content-left a{
+        display: none;
+    }
+
+    .content-right img{
+        padding: 0rem;
+        margin-bottom: 0;
+        margin-right: -.09rem;
+    }
+
+}
+
+
+
